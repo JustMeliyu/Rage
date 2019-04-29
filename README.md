@@ -1,0 +1,2 @@
+# Rage
+my blog

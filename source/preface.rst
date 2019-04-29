@@ -6,4 +6,4 @@
    :maxdepth: 1
    :glob:
 
-   how_to_be_a_rich_man.md
+   build_environment.md

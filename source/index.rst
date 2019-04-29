@@ -3,20 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+=======================================
 Welcome to Rage's blog's documentation!
 =======================================
 
+Contents:
+
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :glob:
 
+   preface
+   Python/*
    test.md
-   centos7&python2&python3.md
-   how_to_be_a_rich_man.md
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

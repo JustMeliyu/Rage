@@ -10,7 +10,9 @@ Welcome to Rage's blog's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   test.md
+   centos7&python2&python3.md
+   how_to_be_a_rich_man.md
 
 Indices and tables
 ==================

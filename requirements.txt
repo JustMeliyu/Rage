@@ -7,3 +7,4 @@ requests==2.6.0
 requests-oauthlib==0.4.2
 whitenoise==1.0.3
 openpyxl==2.4.8
+recommonmark==0.5.0

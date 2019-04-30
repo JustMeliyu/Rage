@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>/</loc>
+     <loc>/preface/</loc>
+     <lastmod>2019-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/build_environment/</loc>
+     <lastmod>2019-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/Python/</loc>
+     <lastmod>2019-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/Python/BasicKnowledge/</loc>
+     <lastmod>2019-04-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/Python/other/</loc>
      <lastmod>2019-04-30</lastmod>
      <changefreq>daily</changefreq>
     </url>

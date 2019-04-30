@@ -1,24 +1,79 @@
 {
     "docs": [
         {
-            "location": "/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Welcome to MkDocs"
+            "location": "/preface/", 
+            "text": "mkdoc\u4e2d\u6587\u6587\u6863", 
+            "title": "\u524d\u8a00"
         }, 
         {
-            "location": "/#welcome-to-mkdocs", 
-            "text": "For full documentation visit  mkdocs.org .", 
-            "title": "Welcome to MkDocs"
+            "location": "/build_environment/", 
+            "text": "\u535a\u5ba2\u642d\u5efa\n\n\n\u53c2\u8003\u94fe\u63a5: http://python-online.cn/zh_CN/latest/c04/c04_03.html\n\n\n\u7b80\u4ecb\n\n\n\u8be5\u535a\u5ba2\u642d\u5efa\u4e3b\u8981\u7531\u4ee5\u4e0b\u6a21\u5757\u53ca\u7f51\u7ad9\u5b9e\u73b0:\n- Sphinx: \u751f\u6210\u7f51\u9875\n- MarkDown: \u4e66\u5199\u6587\u6863\n- GitHub: \u9879\u76ee\u6258\u7ba1\n- Pandoc: \u683c\u5f0f\u8f6c\u6362\n- ReadTheDoc: \u53d1\u5e03\u7f51\u9875\n\n\nSphinx\u642d\u5efa\n\n\n\u6700\u597d\u4f7f\u7528python2.7, python3\u4f3c\u4e4e\u4e0d\u592a\u884c, \u672a\u6df1\u5165\u7814\u7a76.\n\n\n\u5b89\u88c5\u76f8\u5173\u5de5\u5177\u5305, \u6240\u9700\u5305\u5747\u653e\u5728 \ngithub\u9879\u76ee\n \u7684 requirements.txt\n\n\npip install -r requirements.txt\n\n\n\n\u5728\u672c\u5730\u6587\u4ef6\u5939\u4e2d\u521b\u5efa\u9879\u76ee\u76ee\u5f55\n\n\nmkdir my_blog\ncd my_blog\n\n\n\n\u521d\u59cb\u5316\u9879\u76ee\n\n\nsphinx-quickstart\n\n\n\n\u6267\u884c\u4e0a\u9762\u547d\u4ee4\u7684\u65f6\u5019, \u4f1a\u8f93\u5165\u4e00\u4e9b\u57fa\u672c\u914d\u7f6e, \u9664\u4e86\u4ee5\u4e0b\u7684\u51e0\u4e2a, \u5176\u4ed6\u90fd\u53ef\u4ee5\u6309\u9ed8\u8ba4\u914d\u7f6e\u6765\n\n\nProject name: Rage's Blog\nAuthor name(s): Rage\nProject release []: 1.0\nProject language [en]: zh_CN\n\n\n\n\u5b8c\u6210\u914d\u7f6e\u540e, \u5728\u9879\u76ee\u76ee\u5f55\u4e0b, \u4f1a\u6709\u751f\u6210\u4e00\u4e9b\u6587\u4ef6, \u5b89\u88c5tree, \u67e5\u770b\u76ee\u5f55\u7ed3\u6784\n\n\nyum install tree\ntree -C .\n\n\n\n\u672c\u5730\u76ee\u5f55\u7ed3\u6784:\n- build: \u6267\u884cmake html, \u751f\u6210\u5bf9\u5e94\u7684html\u6587\u4ef6;\n- source: \u4e3b\u8981\u7684\u914d\u7f6e\u6587\u4ef6, \u53ca\u6b63\u6587(md\u6216rst\u6587\u4ef6)\u5b58\u653e, \u535a\u5ba2\u76ee\u5f55\u7ed3\u6784\n- Makefile: \u7f16\u8bd1\u6587\u4ef6\n- make.bat\n\n\n\u914d\u7f6e\u53ca\u6269\u5c55\n\n\n1.\u8bbe\u7f6eSphinx\u4e3b\u9898:\n\n\n\u5728 source/conf.py \u4e2d\u6dfb\u52a0\u4ee5\u4e0b\u5185\u5bb9:\n\n\nimport sphinx_rtd_theme\nhtml_theme = 'sphinx_rtd_theme'\nhtml_theme_path = [sphinx_rtd_theme.get_html_theme_path()]\n\n\n\n2.Sphinx\u652f\u6301\u6587\u4ef6\u683c\u5f0f\u8bbe\u7f6e\n\n\nSphinx\u9ed8\u8ba4\u53ea\u652f\u6301rst\u683c\u5f0f\u6587\u4ef6, \u4e60\u60ef\u4f7f\u7528MarkDown\u683c\u5f0f, \u9700\u5728 source/conf.py \u4e2d\u6dfb\u52a0\u4ee5\u4e0b\u5185\u5bb9:\n\n\nfrom recommonmark.parser import CommonMarkParser\nsource_parsers = {\n'.md': CommonMarkParser,\n}\nsource_suffix = ['.rst', '.md']\n\n\n\n\u82e5\u4e0d\u6dfb\u52a0\u6b64\u914d\u7f6e, \u4e5f\u53ef\u4ee5\u901a\u8fc7pandoc\u8fdb\u884c\u8f6c\u5316\n\n\n//\u5b89\u88c5pandoc\nsudo yum install pandoc\n//\u5c06md\u683c\u5f0f\u6587\u4ef6\u8f6c\u5316\u4e3arst\u6587\u4ef6\npandoc test.md -o test.rst\n\n\n\n3.\u4e00\u4e9b\u57fa\u672c\u914d\u7f6e, \u76f4\u63a5\u4f7f\u7528 \ngithub\u9879\u76ee\n \u4e2d\u7684 exts \u6587\u4ef6\u79fb\u52a8\u5230\u9879\u76ee\u6839\u76ee\u5f55\u4e0b, \u5305\u542b\u4ee5\u4e0b\u914d\u7f6e\n- \u914d\u7f6e\u4e3b\u9898\n- \u652f\u6301LaTeX\n- \u652f\u6301\u4e2d\u6587\u68c0\u7d22\n\n\n4.\u914d\u7f6e .gitignore \u6587\u4ef6\n\n\nbuild/\n.idea/\n*.pyc\n\n\n\n\u672c\u5730\u6d4b\u8bd5\n\n\n1.\u65b0\u5efatest.md, \u586b\u5165\u4ee5\u4e0b\u5185\u5bb9\n\n\n2.\u5728index.rst\u4ee5\u4e0b\u5185\u5bb9\u5904\u4e2d\u6dfb\u52a0:\n\n\n.. toctree::\n    :maxdepth: 2\n    :glob:\n\n     test.md\n\n\n\n3.\u5728\u9879\u76ee\u76ee\u5f55\u4e0b\u6267\u884cmake html, \u8fdb\u5165build\u6587\u4ef6\u5939, \u53ef\u67e5\u770b\u65b0\u751f\u6210\u7684index.html\u7b49.\n\n\n\u53d1\u5e03\u7f51\u7ad9\n\n\n\u5c06\u521b\u5efa\u597d\u7684\u9879\u76ee\u4e0a\u4f20\u81f3github.\n\n\n\u5728 \nReadTheDocs\n \u4e2d\u6ce8\u518c\u5e10\u53f7\u540e, \u5173\u8054\u81ea\u5df1\u7684github;\n\u627e\u5230 \nImport a Project\n, \u9009\u62e9\u81ea\u5df1\u7684github\u9879\u76ee, \u5728\u5f00\u59cb\nbuild\n\u4e4b\u524d, \u9700\u5bf9\u9879\u76ee\u505a\u4ee5\u4e0b\u8bbe\u7f6e, \u5728\n\u7ba1\u7406\n\u4e0b\n- \u8bbe\u7f6e\n\u8bed\u8a00\n- \u9ad8\u7ea7\u8bbe\u7f6e\nPython\u89e3\u91ca\u5668 \u9009\u62e9 \nCPython 2.x\n\n- \u9ad8\u7ea7\u8bbe\u7f6e\nPython\u914d\u7f6e\u6587\u4ef6 \u586b\u5199 \nsource/conf.py\n\n\u53e6\u5916\u8fd8\u53ef\u8bbe\u7f6e\u5206\u652f, \u8bed\u8a00, \u9690\u79c1\u7ea7\u522b\u7b49, \u770b\u81ea\u5df1\u9700\u6c42\u800c\u5b9a\n\n\n\u6784\u5efa\u6210\u529f\u540e, \u627e\u5230 \nView Docs\n, \u70b9\u51fb\u8fdb\u5165\u9879\u76ee\u4e3b\u9875, \u67e5\u770b\u6548\u679c", 
+            "title": "\u73af\u5883\u642d\u5efa"
         }, 
         {
-            "location": "/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
-            "title": "Commands"
+            "location": "/build_environment/#_1", 
+            "text": "\u53c2\u8003\u94fe\u63a5: http://python-online.cn/zh_CN/latest/c04/c04_03.html", 
+            "title": "\u535a\u5ba2\u642d\u5efa"
         }, 
         {
-            "location": "/#project-layout", 
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
+            "location": "/build_environment/#_2", 
+            "text": "\u8be5\u535a\u5ba2\u642d\u5efa\u4e3b\u8981\u7531\u4ee5\u4e0b\u6a21\u5757\u53ca\u7f51\u7ad9\u5b9e\u73b0:\n- Sphinx: \u751f\u6210\u7f51\u9875\n- MarkDown: \u4e66\u5199\u6587\u6863\n- GitHub: \u9879\u76ee\u6258\u7ba1\n- Pandoc: \u683c\u5f0f\u8f6c\u6362\n- ReadTheDoc: \u53d1\u5e03\u7f51\u9875", 
+            "title": "\u7b80\u4ecb"
+        }, 
+        {
+            "location": "/build_environment/#sphinx", 
+            "text": "\u6700\u597d\u4f7f\u7528python2.7, python3\u4f3c\u4e4e\u4e0d\u592a\u884c, \u672a\u6df1\u5165\u7814\u7a76.  \u5b89\u88c5\u76f8\u5173\u5de5\u5177\u5305, \u6240\u9700\u5305\u5747\u653e\u5728  github\u9879\u76ee  \u7684 requirements.txt  pip install -r requirements.txt  \u5728\u672c\u5730\u6587\u4ef6\u5939\u4e2d\u521b\u5efa\u9879\u76ee\u76ee\u5f55  mkdir my_blog\ncd my_blog  \u521d\u59cb\u5316\u9879\u76ee  sphinx-quickstart  \u6267\u884c\u4e0a\u9762\u547d\u4ee4\u7684\u65f6\u5019, \u4f1a\u8f93\u5165\u4e00\u4e9b\u57fa\u672c\u914d\u7f6e, \u9664\u4e86\u4ee5\u4e0b\u7684\u51e0\u4e2a, \u5176\u4ed6\u90fd\u53ef\u4ee5\u6309\u9ed8\u8ba4\u914d\u7f6e\u6765  Project name: Rage's Blog\nAuthor name(s): Rage\nProject release []: 1.0\nProject language [en]: zh_CN  \u5b8c\u6210\u914d\u7f6e\u540e, \u5728\u9879\u76ee\u76ee\u5f55\u4e0b, \u4f1a\u6709\u751f\u6210\u4e00\u4e9b\u6587\u4ef6, \u5b89\u88c5tree, \u67e5\u770b\u76ee\u5f55\u7ed3\u6784  yum install tree\ntree -C .  \u672c\u5730\u76ee\u5f55\u7ed3\u6784:\n- build: \u6267\u884cmake html, \u751f\u6210\u5bf9\u5e94\u7684html\u6587\u4ef6;\n- source: \u4e3b\u8981\u7684\u914d\u7f6e\u6587\u4ef6, \u53ca\u6b63\u6587(md\u6216rst\u6587\u4ef6)\u5b58\u653e, \u535a\u5ba2\u76ee\u5f55\u7ed3\u6784\n- Makefile: \u7f16\u8bd1\u6587\u4ef6\n- make.bat", 
+            "title": "Sphinx\u642d\u5efa"
+        }, 
+        {
+            "location": "/build_environment/#_3", 
+            "text": "1.\u8bbe\u7f6eSphinx\u4e3b\u9898:  \u5728 source/conf.py \u4e2d\u6dfb\u52a0\u4ee5\u4e0b\u5185\u5bb9:  import sphinx_rtd_theme\nhtml_theme = 'sphinx_rtd_theme'\nhtml_theme_path = [sphinx_rtd_theme.get_html_theme_path()]  2.Sphinx\u652f\u6301\u6587\u4ef6\u683c\u5f0f\u8bbe\u7f6e  Sphinx\u9ed8\u8ba4\u53ea\u652f\u6301rst\u683c\u5f0f\u6587\u4ef6, \u4e60\u60ef\u4f7f\u7528MarkDown\u683c\u5f0f, \u9700\u5728 source/conf.py \u4e2d\u6dfb\u52a0\u4ee5\u4e0b\u5185\u5bb9:  from recommonmark.parser import CommonMarkParser\nsource_parsers = {\n'.md': CommonMarkParser,\n}\nsource_suffix = ['.rst', '.md']  \u82e5\u4e0d\u6dfb\u52a0\u6b64\u914d\u7f6e, \u4e5f\u53ef\u4ee5\u901a\u8fc7pandoc\u8fdb\u884c\u8f6c\u5316  //\u5b89\u88c5pandoc\nsudo yum install pandoc\n//\u5c06md\u683c\u5f0f\u6587\u4ef6\u8f6c\u5316\u4e3arst\u6587\u4ef6\npandoc test.md -o test.rst  3.\u4e00\u4e9b\u57fa\u672c\u914d\u7f6e, \u76f4\u63a5\u4f7f\u7528  github\u9879\u76ee  \u4e2d\u7684 exts \u6587\u4ef6\u79fb\u52a8\u5230\u9879\u76ee\u6839\u76ee\u5f55\u4e0b, \u5305\u542b\u4ee5\u4e0b\u914d\u7f6e\n- \u914d\u7f6e\u4e3b\u9898\n- \u652f\u6301LaTeX\n- \u652f\u6301\u4e2d\u6587\u68c0\u7d22  4.\u914d\u7f6e .gitignore \u6587\u4ef6  build/\n.idea/\n*.pyc", 
+            "title": "\u914d\u7f6e\u53ca\u6269\u5c55"
+        }, 
+        {
+            "location": "/build_environment/#_4", 
+            "text": "1.\u65b0\u5efatest.md, \u586b\u5165\u4ee5\u4e0b\u5185\u5bb9  2.\u5728index.rst\u4ee5\u4e0b\u5185\u5bb9\u5904\u4e2d\u6dfb\u52a0:  .. toctree::\n    :maxdepth: 2\n    :glob:\n\n     test.md  3.\u5728\u9879\u76ee\u76ee\u5f55\u4e0b\u6267\u884cmake html, \u8fdb\u5165build\u6587\u4ef6\u5939, \u53ef\u67e5\u770b\u65b0\u751f\u6210\u7684index.html\u7b49.", 
+            "title": "\u672c\u5730\u6d4b\u8bd5"
+        }, 
+        {
+            "location": "/build_environment/#_5", 
+            "text": "\u5c06\u521b\u5efa\u597d\u7684\u9879\u76ee\u4e0a\u4f20\u81f3github.  \u5728  ReadTheDocs  \u4e2d\u6ce8\u518c\u5e10\u53f7\u540e, \u5173\u8054\u81ea\u5df1\u7684github;\n\u627e\u5230  Import a Project , \u9009\u62e9\u81ea\u5df1\u7684github\u9879\u76ee, \u5728\u5f00\u59cb build \u4e4b\u524d, \u9700\u5bf9\u9879\u76ee\u505a\u4ee5\u4e0b\u8bbe\u7f6e, \u5728 \u7ba1\u7406 \u4e0b\n- \u8bbe\u7f6e \u8bed\u8a00\n- \u9ad8\u7ea7\u8bbe\u7f6e Python\u89e3\u91ca\u5668 \u9009\u62e9  CPython 2.x \n- \u9ad8\u7ea7\u8bbe\u7f6e Python\u914d\u7f6e\u6587\u4ef6 \u586b\u5199  source/conf.py \n\u53e6\u5916\u8fd8\u53ef\u8bbe\u7f6e\u5206\u652f, \u8bed\u8a00, \u9690\u79c1\u7ea7\u522b\u7b49, \u770b\u81ea\u5df1\u9700\u6c42\u800c\u5b9a  \u6784\u5efa\u6210\u529f\u540e, \u627e\u5230  View Docs , \u70b9\u51fb\u8fdb\u5165\u9879\u76ee\u4e3b\u9875, \u67e5\u770b\u6548\u679c", 
+            "title": "\u53d1\u5e03\u7f51\u7ad9"
+        }, 
+        {
+            "location": "/Python/", 
+            "text": "Python\u7bc7, \u4e3b\u8981\u5305\u542b\u4e00\u4e9bPython\u76f8\u5173\u8d44\u6599\u6574\u7406, \u53ca\u5404\u7c7b\u7b97\u6cd5\u5b9e\u73b0\n\n\n\u57fa\u7840\u77e5\u8bc6", 
+            "title": "Python"
+        }, 
+        {
+            "location": "/Python/#_1", 
+            "text": "", 
+            "title": "\u57fa\u7840\u77e5\u8bc6"
+        }, 
+        {
+            "location": "/Python/BasicKnowledge/", 
+            "text": "centos7\u4e0b\u5b89\u88c5py2\npy3\n\n\npy2\u4e0epy3\u7684\u4e00\u4e9b\u533a\u522b", 
+            "title": "1.1\u57fa\u7840\u77e5\u8bc6"
+        }, 
+        {
+            "location": "/Python/BasicKnowledge/#centos7py2py3", 
+            "text": "", 
+            "title": "centos7\u4e0b\u5b89\u88c5py2&amp;py3"
+        }, 
+        {
+            "location": "/Python/BasicKnowledge/#py2py3", 
+            "text": "", 
+            "title": "py2\u4e0epy3\u7684\u4e00\u4e9b\u533a\u522b"
+        }, 
+        {
+            "location": "/Python/other/", 
+            "text": "\u5176\u4ed6", 
+            "title": "1.2\u5176\u4ed6"
+        }, 
+        {
+            "location": "/Python/other/#_1", 
+            "text": "", 
+            "title": "\u5176\u4ed6"
         }
     ]
 }

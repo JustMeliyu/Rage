@@ -1,2 +1,8 @@
 site_name: Rage's Blog
+pages:
+  - 前言: preface.md
+  - 环境搭建: build_environment.md
+  - Python篇: Python.md
+#    - 1.1基础知识: Python/BasicKnowledge.md
+#    - 1.2其他: Python/other.md
 theme: readthedocs
